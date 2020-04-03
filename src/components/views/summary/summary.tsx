@@ -177,6 +177,7 @@ export class Summary {
                 caringForRelatives={snippetsAnswers.caringForRelatives}
               />
             )}
+            <ia-two-words answers={answers} />
             <ia-qr-code answers={answers} />
             <ia-answers-table answers={answers} />
           </div>

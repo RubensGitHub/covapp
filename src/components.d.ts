@@ -8,6 +8,7 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { Language, } from "@d4l/web-components-library/dist/types/components/LanguageSwitcher/language-switcher";
 import { RouterHistory, } from "@stencil/router";
 import { Question, } from "./global/questions";
+import { WordService, } from "./cov2words_client_js/rest_services/word.service";
 export namespace Components {
     interface AppRoot {
     }
@@ -50,6 +51,8 @@ export namespace Components {
     }
     interface IaLogoD4l {
     }
+    interface IaLogoHeader {
+    }
     interface IaLogoRki {
     }
     interface IaNavigationHeader {
@@ -71,6 +74,10 @@ export namespace Components {
     }
     interface IaSummary {
         "history": RouterHistory;
+    }
+    interface IaTwoWords {
+        "answers": any;
+        "word_service": WordService;
     }
 }
 declare global {
@@ -170,6 +177,12 @@ declare global {
         prototype: HTMLIaLogoD4lElement;
         new (): HTMLIaLogoD4lElement;
     };
+    interface HTMLIaLogoHeaderElement extends Components.IaLogoHeader, HTMLStencilElement {
+    }
+    var HTMLIaLogoHeaderElement: {
+        prototype: HTMLIaLogoHeaderElement;
+        new (): HTMLIaLogoHeaderElement;
+    };
     interface HTMLIaLogoRkiElement extends Components.IaLogoRki, HTMLStencilElement {
     }
     var HTMLIaLogoRkiElement: {
@@ -212,6 +225,12 @@ declare global {
         prototype: HTMLIaSummaryElement;
         new (): HTMLIaSummaryElement;
     };
+    interface HTMLIaTwoWordsElement extends Components.IaTwoWords, HTMLStencilElement {
+    }
+    var HTMLIaTwoWordsElement: {
+        prototype: HTMLIaTwoWordsElement;
+        new (): HTMLIaTwoWordsElement;
+    };
     interface HTMLElementTagNameMap {
         "app-root": HTMLAppRootElement;
         "connect-translations": HTMLConnectTranslationsElement;
@@ -229,6 +248,7 @@ declare global {
         "ia-logo-charite": HTMLIaLogoChariteElement;
         "ia-logo-component": HTMLIaLogoComponentElement;
         "ia-logo-d4l": HTMLIaLogoD4lElement;
+        "ia-logo-header": HTMLIaLogoHeaderElement;
         "ia-logo-rki": HTMLIaLogoRkiElement;
         "ia-navigation-header": HTMLIaNavigationHeaderElement;
         "ia-qr-code": HTMLIaQrCodeElement;
@@ -236,6 +256,7 @@ declare global {
         "ia-recommendation": HTMLIaRecommendationElement;
         "ia-start": HTMLIaStartElement;
         "ia-summary": HTMLIaSummaryElement;
+        "ia-two-words": HTMLIaTwoWordsElement;
     }
 }
 declare namespace LocalJSX {
@@ -287,6 +308,8 @@ declare namespace LocalJSX {
     }
     interface IaLogoD4l {
     }
+    interface IaLogoHeader {
+    }
     interface IaLogoRki {
     }
     interface IaNavigationHeader {
@@ -312,6 +335,10 @@ declare namespace LocalJSX {
         "history"?: RouterHistory;
         "onShowLogoHeader"?: (event: CustomEvent<any>) => void;
     }
+    interface IaTwoWords {
+        "answers"?: any;
+        "word_service"?: WordService;
+    }
     interface IntrinsicElements {
         "app-root": AppRoot;
         "connect-translations": ConnectTranslations;
@@ -329,6 +356,7 @@ declare namespace LocalJSX {
         "ia-logo-charite": IaLogoCharite;
         "ia-logo-component": IaLogoComponent;
         "ia-logo-d4l": IaLogoD4l;
+        "ia-logo-header": IaLogoHeader;
         "ia-logo-rki": IaLogoRki;
         "ia-navigation-header": IaNavigationHeader;
         "ia-qr-code": IaQrCode;
@@ -336,6 +364,7 @@ declare namespace LocalJSX {
         "ia-recommendation": IaRecommendation;
         "ia-start": IaStart;
         "ia-summary": IaSummary;
+        "ia-two-words": IaTwoWords;
     }
 }
 export { LocalJSX as JSX };
@@ -358,6 +387,7 @@ declare module "@stencil/core" {
             "ia-logo-charite": LocalJSX.IaLogoCharite & JSXBase.HTMLAttributes<HTMLIaLogoChariteElement>;
             "ia-logo-component": LocalJSX.IaLogoComponent & JSXBase.HTMLAttributes<HTMLIaLogoComponentElement>;
             "ia-logo-d4l": LocalJSX.IaLogoD4l & JSXBase.HTMLAttributes<HTMLIaLogoD4lElement>;
+            "ia-logo-header": LocalJSX.IaLogoHeader & JSXBase.HTMLAttributes<HTMLIaLogoHeaderElement>;
             "ia-logo-rki": LocalJSX.IaLogoRki & JSXBase.HTMLAttributes<HTMLIaLogoRkiElement>;
             "ia-navigation-header": LocalJSX.IaNavigationHeader & JSXBase.HTMLAttributes<HTMLIaNavigationHeaderElement>;
             "ia-qr-code": LocalJSX.IaQrCode & JSXBase.HTMLAttributes<HTMLIaQrCodeElement>;
@@ -365,6 +395,7 @@ declare module "@stencil/core" {
             "ia-recommendation": LocalJSX.IaRecommendation & JSXBase.HTMLAttributes<HTMLIaRecommendationElement>;
             "ia-start": LocalJSX.IaStart & JSXBase.HTMLAttributes<HTMLIaStartElement>;
             "ia-summary": LocalJSX.IaSummary & JSXBase.HTMLAttributes<HTMLIaSummaryElement>;
+            "ia-two-words": LocalJSX.IaTwoWords & JSXBase.HTMLAttributes<HTMLIaTwoWordsElement>;
         }
     }
 }

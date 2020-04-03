@@ -114,6 +114,8 @@
     "q_X0_text": "Welche der folgenden Symptome hatten Sie in den letzten 24h? (Mehrfachauswahl möglich)",
     "qr_code_headline": "Zusammenfassung Ihrer Antworten",
     "qr_code_paragraph": "Folgend finden Sie eine Übersicht Ihrer Antworten als Tabelle und QR-Code.\n\nFalls Sie den Hinweis erhalten haben, sich in einer Untersuchungsstelle vorzustellen, speichern Sie bitte den folgenden QR-Code und die Zusammenfassung der Fragen. Wenn möglich, drucken Sie die Zusammenfassung aus und zeigen Sie diese vor.\n\nWenn Sie das Haus verlassen, halten Sie ausreichend Abstand (mindestens 1,5 Meter) zu anderen Personen. Fassen Sie möglichst nichts an und achten Sie auf die Regeln für richtiges Husten und Niesen.",
+    "two_words_headline": "Die Antworten zusammengefasst in dieser Wortkombination:",
+    "two_words_paragraph": "",    
     "questionnaire_button_generate_qr": "Fragebogen abschließen",
     "questionnaire_button_next": "Weiter",
     "recommendation_case_1_additonal_info": "[TRANSLATION/CONTENT needed for translation key: recommendation_case_1_additonal_info]",
